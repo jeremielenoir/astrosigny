@@ -3,10 +3,18 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}
+        <link rel="stylesheet" href="{{asset('build/css/style.css')}}">
+        {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+
+          <div id="sidebar">
+            {{ asset('menus.html.twig') }};
+        </div>
+        <div id="content">
+              {% block body %}<h1>Hello World !</h1>{% endblock %}
+          </div>
         {% block javascripts %}{% endblock %}
     </body>
 </html>
