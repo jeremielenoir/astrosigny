@@ -3,9 +3,9 @@ doctrine_mongodb:
     auto_generate_hydrator_classes: '%kernel.debug%'
     connections:
         default:
-            server: 'MONGODB_URL'
+            server: '%env(MONGODB_URL)%'
             options: {}
-    default_database: 'astrosigny'
+    default_database: '%env(MONGODB_DB)%'
     document_managers:
         default:
             auto_mapping: true
