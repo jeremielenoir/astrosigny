@@ -2,10 +2,10 @@
 Astrosigny website - build with Symfony
 Installer NodeJS
 
-https://nodejs.org/
+    https://nodejs.org/
 Installer Composer
 
-https://getcomposer.org/download/
+    https://getcomposer.org/download/
 Installer PHP 7.2.4 et MySQL
 
 Si Windows
@@ -21,45 +21,45 @@ Si Linux
     Débrouillez-vous pour avoir PHP en ligne de commande et un serveur MySQL qui tourne :) !
 LDC : dans le répertoire du projet, "Updater" Symfony
 
-composer update
+    composer update
 LDC : Installer Doctrine (si la commande précédente ne l'a pas déjà fait)
 
-composer require symfony/orm-pack
-composer require symfony/maker-bundle --dev
+    composer require symfony/orm-pack
+    composer require symfony/maker-bundle --dev
 Editeur : Modifier le fichier /.env
 
-DATABASE_URL=mysql://login:pass@server:port/oostage
+    DATABASE_URL=mysql://login:pass@server:port/oostage
 
 (remplacer login, pass et port par ceux de votre config MySQL)
 LDC : Création de la BDD
 
-php bin/console doctrine:database:create
+    php bin/console doctrine:database:create
 LDC : Migration de la BDD
 
-php bin/console make:migration
-php bin/console doctrine:migrations:migrate
+    php bin/console make:migration
+    php bin/console doctrine:migrations:migrate
 LDC : Lancement du serveur
 
-php bin/console server:run
+    php bin/console server:run
 Tester le site (vérifier l'id du port)
 
-http://127.0.0.1:8000/
+    http://127.0.0.1:8000/
 LDC : Installer Encore (pour JS et CSS)
 
-composer require encore
+    composer require encore
 Installer Yarn :
 
-https://yarnpkg.com/
+    https://yarnpkg.com/
 LDC : Installer Yarn pour le projet :
 
-yarn install
+    yarn install
 LDC : Installer le loader SASS
 
-yarn add sass-loader node-sass --dev
+    yarn add sass-loader node-sass --dev
 
-(bien vérifier que le fichier /.gitignore contienne la ligne "/public/build/")
+    (bien vérifier que le fichier /.gitignore contienne la ligne "/public/build/")
 LDC : lancer le watcher SASS
 
-yarn run encore dev --watch
+    yarn run encore dev --watch
 
 (à chaque compilation, il créera les fichiers /public/build/css/style.css et /public/build/js/js.js)
